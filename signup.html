@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>QuickMingle</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="js/javascript" href="js.js">
+    <link rel="icon" href="QuickMingle/img/QM.svg" type="image/svg+xml">
+
+</head>
+
+<body>
+    <header>
+     <img src="/QuickMingle/img/QM1.svg" alt="SVG Image">
+        
+
+        
+        <nav>
+            <ul>
+              
+              <button onclick="window.location.href='login.php'"><h1>Login</h1></button>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to QuickMingle</h2>
+        <p>Find your perfect match and start a new adventure!</p>
+        <div class="container">
+           
+
+
+
+            <form id="signup-form" method="POST" action="signup.html" >
+                <h2>Sign up</h2>
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio"></textarea>
+               <button type="submit" onclick="createProfile()">Create Profile</button>
+            </form> 
+        </div>
+        
+        
+    </main>
+    <footer>
+        <p>&copy; QuickMingle 2023</p>
+    </footer>
+ <style>
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    <script>
+
+const signupForm = document.getElementById('signup-form');
+signupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fullname = signupForm.fullname.value;
+    const email = signupForm.email.value;
+    const username = signupForm.username.value;
+    const password = signupForm.password.value;
+    const bio = signupForm.bio.value;
+    // Call a backend API to create a new user account
+    fetch('http://127.0.0.1:5000/signup', {
+        fullname: fullname,
+        email: email,
+        username: username,
+        password: password,
+        bio: bio
+    }, {
+        method: 'POST',
+        header: {
+            "Content-Type" : "application/json"
+        }
+    }).then(res=> console.log(res)).catch(err=> console.log(err))
+});
+    </script>
+</body>
+
+</html>
