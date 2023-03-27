@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/signup.css" />
+    <title>CREATE ACCOUNT</title>
+  </head>
+  <body>
+    <header>
+      <!-- /QuickMingle/img/QM1.svg -->
+      <img src="../img/QM1.svg" alt="SVG Image" />
+      <nav>
+        <ul>
+          <button onclick="window.location.href = './login.html'">Login</button>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="form-container">
+      <h2>Welcome to QuickMingle</h2>
+      <p>Find your perfect match and start a new adventure!</p>
+      <form id="signup-form">
+        <h2>Sign up</h2>
+        <div class="form-wrapper">
+          <div class="form-row">
+            <div class="form-input-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" name="fullname" required />
+            </div>
+            <div class="form-input-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-input-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" required/>
+            </div>
+            <div class="form-input-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+          </div>
+         
+            <div class="form-input-group ">
+              <label for="bio">Bio</label>
+              <textarea class="textarea"  id="bio" name="bio"></textarea> 
+            </div>
+          <button type="submit"  id="signup">Create Profile</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script  src="../js/createUser.js"></script>
+</html>

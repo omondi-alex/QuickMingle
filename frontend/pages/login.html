@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+<body>
+
+    <header>
+        <img src="/QuickMingle/img/QM1.svg" alt="SVG Image">
+
+        <nav>
+            <ul>
+
+                <p>Sign up to get started:</p>
+                <button onclick="window.location.href='signup.html'">
+                    <h1>SignUp</h1>
+                </button>
+            </ul>
+        </nav>
+    </header>
+    <form id="login-form">
+        <h2>Login</h2>
+        <!-- HTML form in sign-up page -->
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button id="login">Login</button>
+        </form>
+    
+</body>
+<script src="../js/login.js"></script>
+</html>

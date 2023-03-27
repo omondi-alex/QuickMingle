@@ -12,7 +12,7 @@ loginForm.addEventListener('submit', (e) => {
     // Call a backend API to verify the credentials and log the user in
 });
 
-signupForm.addEventListener('submit', (e) => {
+signupForm.addEventListener('click', (e) => {
     e.preventDefault();
     alert('U tried submitting the form')
     const fullname = signupForm.fullname.value;
